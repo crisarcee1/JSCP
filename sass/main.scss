@@ -1,0 +1,226 @@
+@import 'colores';
+@import 'extend';
+@import'mixin';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Kanit', sans-serif;
+}
+header, .alert{
+    z-index: 100;
+  }
+  .description{
+    height: 25px;
+    overflow: hidden;
+    transition: height .3s ease-in .3s;
+  }
+  .description:hover{
+    height: 80px;
+  }
+  .carrito{
+    min-height: 80vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .table__productos{
+    display: flex;
+  }
+  .table__productos > img{
+    width: 9rem;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-right: 20px;
+  }
+  .table__cantidad > input{
+    width: 40px;
+    border: none;
+    outline: 0;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 30px;
+    margin-bottom: 20px;
+  }
+  .hide, .remove{
+    display: none;
+  }
+ 
+
+#header {
+    @include header;
+
+    .header-logo {
+        @include header-logo;
+    }
+
+    .header-menu ul {
+        display: flex;
+        list-style: none;
+    }
+
+    li a {
+        @include lista;
+    }
+
+    &:hover {
+        color: map-get($colores, principal);
+        color: map-get($colores, secundario);
+    }
+
+}
+
+.contenedor-gral {
+    background-color: map-get($colores, terciario);
+}
+
+
+.LogoH {
+    @include logo;
+}
+
+h1 {
+    background-color: black;
+    text-align: center;
+}
+
+.precio {
+
+    margin-bottom: 5px;
+    margin-top: 2px;
+}
+
+.h-index {
+    @include h1-index;
+}
+
+.p-index p {
+    @include p-index;
+}
+
+.galeria img {
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+
+.titulo-fotos {
+    @include titulo-fotos;
+}
+
+.ver-mas {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 20px;
+
+    a {
+
+        color: map-get($colores, principal);
+    }
+}
+
+.descripcion {
+    text-align: center;
+}
+
+.produ1 {
+    margin: -5px;
+}
+
+.nombreProducto {
+    margin-bottom: 0;
+}
+
+.acercate h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+    margin-top: 20px;
+}
+
+.direccionLocal p {
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+    margin-top: 20px;
+}
+
+.iframe-h {
+    @include iframe;
+}
+
+.pie-pagina {
+    width: 100%;
+    background: map-get($colores, principal);
+
+    .grupo-1 {
+        @include footerG1;
+
+        .box figure {
+            @include boxG1;
+        }
+
+        img {
+            width: 100px;
+        }
+
+        h2 {
+            color: #FFF;
+            margin-bottom: 25px;
+            font-size: 20px;
+        }
+
+        p {
+            color: #efefef;
+            margin-bottom: 10px;
+        }
+
+        .red-social a {
+            @include redes;
+        }
+
+        a:hover {
+            color: blueviolet;
+        }
+    }
+}
+
+.grupo-2 {
+    @include footerG2;
+
+    small {
+        font-size: 15px;
+    }
+}
+
+.whatsapp {
+    @include whatsapp;
+
+    .whatsapp:hover {
+        text-decoration: none;
+        color: #25d366;
+        background-color: #fff;
+    }
+
+    .mi-whatsapp {
+        margin-top: 14px;
+    }
+}
+
+.CajitasGaleriaDos {
+    width: 30%;
+}
+
+@import 'contacto';
+@import 'equipo';
+@import 'blog';
+@import 'catalogo';
+@import 'blogInfo';
+
+@import 'responsive';

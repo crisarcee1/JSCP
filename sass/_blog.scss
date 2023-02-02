@@ -1,0 +1,66 @@
+#header .header-menu3 ul {
+    display: flex;
+    list-style: none;
+
+    li a {
+        text-decoration: none;
+        margin: 1px 5px;
+        margin-right: 100px;
+        background-color: black;
+        color: white;
+        padding: 12px 15px;
+        border-radius: 20px;
+        font-size: 20px;
+
+        &:hover {
+            background-color: orange;
+            color: black;
+        }
+    }
+}
+
+#galeriaBlog {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 100px;
+    width: 100%;
+    margin-top: 40px;
+
+
+    img {
+        width: 250px;
+        height: 300px;
+    }
+
+    .fotos-blog {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid black;
+        border-radius: 20px;
+        background-color: white;
+        margin-left: auto;
+        margin-right: auto;
+
+        h3 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .bozal-text {
+            text-align: center;
+        }
+
+        .leer-mas {
+            color: darkblue;
+            text-align: center;
+        }
+    }
+}
+.leerMas{
+    display: flex;
+    justify-content: center;
+}
